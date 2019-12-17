@@ -1,8 +1,8 @@
 <?php
+setcookie('login', time() + 365 * 24 * 3600, null, null, false, true);
+setcookie('password',time() + 365 * 24 * 3600, null, null, false, true);
 $page = "exercice3";
 include 'header.php';
-setcookie('login', '', time() + 365 * 24 * 3600, null, null, false, true);
-setcookie('password', '', time() + 365 * 24 * 3600, null, null, false, true);
 $message = '';
 if (isset($_POST['login']) & isset($_POST['password'])) {
     $_COOKIE['login'] = $_POST['login'];

@@ -1,8 +1,8 @@
 <?php
+setcookie('login', time() + 365 * 24 * 3600, null, null, false, true);
+setcookie('password', time() + 365 * 24 * 3600, null, null, false, true);
 $page = "exercice4";
 include 'header.php';
-setcookie('login', '', time() + 365 * 24 * 3600, null, null, false, true);
-setcookie('password', '', time() + 365 * 24 * 3600, null, null, false, true);
 $message = '';
 if (isset($_POST['login']) & isset($_POST['password'])) {
     $_COOKIE['login'] = $_POST['login'];
@@ -13,7 +13,7 @@ if (isset($_POST['login']) & isset($_POST['password'])) {
     ?>
     <div class="jumbotron  d-flex flex-column align-items-center">
         <form action="exo4.php" method="POST">
-            <fieldset>
+            <fieldset>  
                 <legend>Contact</legend>
                 <div class="identification">
                     <label for="identification">Identification:</label>
